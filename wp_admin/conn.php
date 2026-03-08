@@ -1,9 +1,10 @@
 <?php
 session_start();
-$host = "localhost"
-$user = "root";
-$password = "";
-$database = "2906898_mpcdatabase";
+
+$host = getenv('DB_HOST') ?: 'mysql';
+$user = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: '';
+$database = getenv('DB_DATABASE') ?: '2906898_mpcdatabase';
 
 $conn = new mysqli($host, $user, $password, $database);
 
