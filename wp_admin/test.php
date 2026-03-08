@@ -1,6 +1,6 @@
 
 <?php
-require_once 'wp_admin/app/includes/conn.php';
+require_once 'wp_admin/conn.php';
 
 if ($conn->ping()) {
     echo "<h1>✅ Success!</h1>";
